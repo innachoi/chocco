@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  margin-bottom: 52px;
+  z-index: 15;
+}
+
+.header__logo {
+  display: flex;
+  margin-right: 29px;
+}

@@ -1,14 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Проект BURGER</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 	<link rel="stylesheet" href="./css/main.css">
+  <title>CHOCCO Натуральные шоколадные батончики</title>
 </head>
 <body>
+  <div class="wrapper">
+    <section class="welcome section">
+      <div class="container welcome__container">
+        <header class="header">
+          <div class="header__logo">
+            <img src="./img/logo/chocco.png" alt="CHOCCO" class="logo__img">
+          </div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Батончики</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Команда</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Меню</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Как мы работаем</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <a href="callto:+78009039090" class="contacts__tel">8 800 903 90 90</a>
+          </div>
+        </header>
+        <div class="welcome__main">
+          <div class="welcome__content">
+            <h1 class="welcome__content-slogan">НАТУРАЛЬНЫЕ ШОКОЛАДНЫЕ БАТОНЧИКИ</h1>
+            <div class="welcome__content-desc">
+              <p>
+                Наши батончики идеально подходят для тех, кто следит за своим здоровьем
+              </p>
+            </div>
+            <button type="button" class="welcome__content-btn btn-order btn-order--white">
+              ЗАКАЗАТЬ
+            </button>
+            <div class="welcome__features">
+              <ul class="welcome__features-list features">
+                <li class="features__item feature">
+                  <div class="feature__icon">
+                    <img src="./img/icons/item-1.svg" alt="" class="feature__img">
+                  </div>
+                  <div class="feature__text">100% натуральный продукт</div>
+                </li>
+                <li class="features__item feature">
+                  <div class="feature__icon" style="width: 85px">
+                    <img src="./img/icons/item-2.svg" alt="" class="feature__img">
+                  </div>
+                  <div class="feature__text">3-5 дней доставка по РФ</div>
+                </li>
+                <li class="features__item feature">
+                  <div class="feature__icon">
+                    <img src="./img/icons/item-3.svg" alt="" class="feature__img">
+                  </div>
+                  <div class="feature__text">Не портит фигуру</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="welcome__bars">
+            <img src="./img/background/bars.png" alt="" class="welocme__img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="menu-fixed">
+      <ul class="menu-fixed__list">
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot menu-fixed__dot--active"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+        <li class="menu-fixed__item">
+          <button type="button" class="menu-fixed__dot"></button>
+        </li>
+      </ul>
+    </nav>
+    <section class="pros section">
+      <div class="container pros__container">
+        <div class="pros__title">
+          <h2 class="section-title pros__title-heading">ПОЧЕМУ CHOCCO?</h2>
+          <div class="pros__title-desc">
+            <p>
+              В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.
+            </p>
+          </div>
+        </div>
+        <ul class="pros__list">
+          <li class="pros__item">
+            <div class="pros__icon">
+              <img src="./img/icons/1.svg" alt="" class="pros__img">
+            </div>
+            <h4 class="pros__item-name">Полезно</h4>
+            <div class="pros__item-desc">
+              <p>
+                Натуральность - ключевое качество нашей продукции. Мы используем только природные ингредиенты.
+              </p>
+            </div>
+          </li>
+          <li class="pros__item">
+            <div class="pros__icon">
+                <img src="./img/icons/3.svg" alt="" class="pros__img">
+            </div>
+            <h4 class="pros__item-name">Вкусно</h4>
+            <div class="pros__item-desc">
+              <p>
+                Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.
+              </p>          
+            </div>
+          </li>
+          <li class="pros__item">
+            <div class="pros__icon">
+              <img src="./img/icons/2.svg" alt="" class="pros__img">
+              </div>
+            <h4 class="pros__item-name">Питательно</h4>
+            <p class="pros__item-desc">
+              Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.          
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+    <!--Bar CHOCCO section -->
+    <!-- Team section -->
+    <!-- Menu section -->
+  
+    <section class="reviews section">
+      <div class="container reviews__container">
+        <h2 class="section-title reviews__heading">ОТЗЫВЫ</h2>
+        <div class="reviews__full review">
+          <div class="review__icon">
+            <img src="./img/photo/1.jpg" alt="" class="review__img">
+          </div>
+          <div class="review__content">
+            <h4 class="review__title">Лучший перекус</h4>
+            <div class="review__text">
+              <p>
+                Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.
+              </p>
+            </div>
+            <span class="review__author">Алёна Хмельницкая</span>
+          </div>
+        </div>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__item-icon reviews__item-icon--active">
+              <a href="#" class="reviews__item-link">
+                <img src="./img/photo/1_s.jpg" alt="" class="review__item-img">
+              </a>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__item-icon">
+              <a href="#" class="reviews__item-link">
+                <img src="./img/photo/2.jpg" alt="" class="review__item-img">
+              </a>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__item-icon">
+              <a href="#" class="reviews__item-link">
+                <img src="./img/photo/3.jpg" alt="" class="review__item-img">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>

@@ -1,0 +1,10 @@
+.contacts {
+  display: inline-block;
+  text-align: center;
+  &::before {
+    content: url(../../img/icons/phone.png);
+  }
+  .contacts__tel {
+    @include asNormal(24px, white);
+  }
+}

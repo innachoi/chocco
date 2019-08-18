@@ -1,0 +1,94 @@
+.pros {
+  position: relative;
+  @include sectionDesktop(#fff);
+  display: flex;
+  align-content: center;
+  &::before {
+    content: url(../../img/background/pattern_leaf.png);
+    position: absolute;
+    left: 0;
+    top: 26%;
+  }
+  &::after {
+    content: url(../../img/background/raspberries.png);
+    position: absolute;
+    left: 0;
+    top: 63%;
+    z-index: 10;
+  }
+}
+
+.pros__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pros__title {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 53px;
+  &-heading {
+    margin-bottom: 8px;
+  }
+  &-desc {
+    display: block;
+    margin: 0;
+    padding: 0 242px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.pros__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.pros__item {
+  width: 28%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 63px;
+  &:last-child {
+    margin: 0;
+  }
+  &:nth-child(2) {
+    width: 31%;
+  }
+  &-name {
+    font-family: $asFont;
+    font-size: 27px;
+    font-weight: $boldFont;
+    color: black;
+    margin: 0;
+    margin-bottom: 18px;
+  }
+  &-desc {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.pros__icon {
+  display: flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: $lighter;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pros__img {
+  max-width: 53%;
+  object-fit: cover;
+}
+

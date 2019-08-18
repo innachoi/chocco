@@ -1,0 +1,33 @@
+@mixin sectionDesktop($bgColor) {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: $bgColor;
+}
+
+// Font AS-regular
+
+@mixin asNormal($size, $color) {
+  font-family: $asFont;
+  font-size: $size;
+  color: $color;
+  text-decoration: none;
+}
+
+// Order Button
+
+@mixin btnOrder ($color, $font) {
+  padding: 18px 35px;
+  background-color: $color;
+  border-radius: 45px;
+  border: none;
+  font-family: $asFont;
+  font-size: 19px;
+  font-weight: 800;
+  color: $font;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
