@@ -5,15 +5,6 @@
   background-color: $bgColor;
 }
 
-// Font AS-regular
-
-@mixin asNormal($size, $color) {
-  font-family: $asFont;
-  font-size: $size;
-  color: $color;
-  text-decoration: none;
-}
-
 // Order Button
 
 @mixin btnOrder ($color, $font) {
@@ -21,7 +12,6 @@
   background-color: $color;
   border-radius: 45px;
   border: none;
-  font-family: $asFont;
   font-size: 19px;
   font-weight: 800;
   color: $font;

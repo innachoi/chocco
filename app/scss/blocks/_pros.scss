@@ -4,13 +4,13 @@
   display: flex;
   align-content: center;
   &::before {
-    content: url(../../img/background/pattern_leaf.png);
+    content: url(../img/background/pattern_leaf.png);
     position: absolute;
     left: 0;
     top: 26%;
   }
   &::after {
-    content: url(../../img/background/raspberries.png);
+    content: url(../img/background/raspberries.png);
     position: absolute;
     left: 0;
     top: 63%;
@@ -62,7 +62,6 @@
     width: 31%;
   }
   &-name {
-    font-family: $asFont;
     font-size: 27px;
     font-weight: $boldFont;
     color: black;

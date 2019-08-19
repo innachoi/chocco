@@ -2,13 +2,13 @@
   @include sectionDesktop(#fff);
   position: relative;
   &::before {
-    content: url(../../img/background/strawberries.png);
+    content: url(../img/background/strawberries.png);
     position: absolute;
     top: -2%;
     right: 3%;
   }
   &::after {
-    content: url(../../img/background/pattern_leaf-and-berries.png);
+    content: url(../img/background/pattern_leaf-and-berries.png);
     position: absolute;
     bottom: -11%;
     left: 0;
@@ -33,7 +33,7 @@
   padding: 38px 47px;
   z-index: 10;
   &::after {
-    content: url(../../img/background/review_bg.png);
+    content: url(../img/background/review_bg.png);
     position: absolute;
     z-index: -10;
     bottom: 2%;
@@ -64,7 +64,6 @@
 }
 
 .review__title {
-  font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 500;
   color: #323232;
