@@ -4,14 +4,36 @@
   &::before {
     content: url(../img/background/strawberries.png);
     position: absolute;
-    top: -2%;
+    top: 10%;
     right: 3%;
+
+    @include phones {
+      content: "";
+      background-image: url(../img/background/strawberries.png);
+      background-size: cover;
+      width: rem(113px);
+      height: rem(109px);
+      top: 2%;
+    }
+
+    @include phones {
+      display: none;
+    }
   }
   &::after {
     content: url(../img/background/pattern_leaf-and-berries.png);
     position: absolute;
     bottom: -11%;
     left: 0;
+    z-index: 5;
+
+    @include tablets {
+      content: "";
+      background-image: url(../img/background/pattern_leaf-and-berries.png);
+      background-size: cover;
+      width: rem(140px);
+      height: rem(317px);
+    }
   }
 }
 
@@ -21,33 +43,99 @@
 }
 
 .reviews__heading {
-  margin-bottom: 44px;
+  margin-bottom: rem(44px);
+
+  @include phones {
+    margin-top: rem(70px);
+  }
 }
 
 .reviews__full {
   position: relative;
   display: flex;
+  background: #f8faf9;
+  background-size: cover;
   width: 100%;
-  height: 345px;
+  height: rem(345px);
   justify-content: flex-start;
-  padding: 38px 47px;
   z-index: 10;
+
+  &::before {
+    content: "";
+    position: relative;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 50%;
+    background: white;
+    top: -17%;
+    left: 50%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
   &::after {
-    content: url(../img/background/review_bg.png);
-    position: absolute;
-    z-index: -10;
-    bottom: 2%;
-    right: 0;
+    content: "";
+    position: relative;
+    right: -2%;
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-image: url(../img/background/review_leaf.png);
+    background-repeat: no-repeat;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    width: rem(460px);
+    height: rem(600px);
+    background-image: url(../img/background/review_bg-small.png);
+  }
+
+  @include phones {
+    height: rem(486px);
+  }
+}
+
+.review__content-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(52px);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding: 20% 10% 0;
   }
 }
 
 .review__icon {
-  width: 253px;
-  height: 259px;
-  flex-basis: 253px;
+  display: inline-block;
+  max-width: rem(253px);
+  max-height: rem(259px);
+  flex-basis: rem(253px);
   flex-shrink: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
   overflow: hidden;
+
+  @include tablets {
+    max-width: rem(203px);
+    max-height: rem(208px);
+    flex-basis: rem(203px);
+    margin: 0;
+  }
+
+  @include phones {
+    max-width: rem(122px);
+    max-height: rem(125px);
+    flex-basis: rem(122px);
+    margin: 0;
+  }
 }
 
 .review__img {
@@ -59,20 +147,31 @@
 .review__content {
   display: flex;
   flex-flow: column;
-  width: 47%;
   flex-shrink: 3;
+
+  @include tablets {
+    align-items: center;
+  }
 }
 
 .review__title {
-  font-size: 30px;
+  font-size: rem(30px);
   font-weight: 500;
   color: #323232;
-  margin: 0 0 26px 0;
-  padding-top: 12px;
+  margin: 0 0 rem(26px) 0;
+  padding-top: rem(12px);
+
+  @include phones {
+  }
 }
 
 .review__text {
-  margin: 0 0 32px 0;
+  margin: 0 0 rem(32px) 0;
+
+  @include tablets {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 .review__author {
@@ -85,25 +184,45 @@
   margin: 0;
   display: flex;
   align-items: center;
-  margin: 11px 0 0 16px;
+  margin: rem(11px) 0 0 rem(16px);
+  z-index: 10;
+
+  @include tablets {
+    margin-top: rem(40px);
+  }
+
+  @include phones {
+    margin-bottom: rem(75px);
+  }
 }
 
 .reviews__item {
-  margin-right: 10px;
+  margin-right: rem(10px);
 }
 
 .reviews__item-icon {
-  width: 67px;
-  height: 67px;
+  width: rem(67px);
+  height: rem(67px);
   border-radius: 50%;
   overflow: hidden;
-  border: 0px solid;
+  border: rem(0px) solid;
   transition: border .3s;
   box-sizing: content-box;
+  border: rem(6px) solid transparent;
+
+  @include tablets {
+    width: rem(84px);
+    height: rem(84px);
+  }
+
+  @include phones {
+    width: rem(68px);
+    height: rem(68px);
+  }
 }
 
 .reviews__item-icon--active {
-  border: 6px solid $green;
+  border: rem(6px) solid $green;
 }
 
 .review__item-img {

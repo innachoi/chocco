@@ -1,0 +1,68 @@
+.delivery {
+  @include sectionDesktop(white);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: url(../img/background/blackberry.png);
+    position: absolute;
+    right: 2%;
+    top: -24%;
+
+    @include tablets {
+      content: "";
+      display: block;
+      background-image: url(../img/background/blackberry.png);
+      background-size: cover;
+      width: rem(136px);
+      height: rem(148px);
+      top: -9%;
+    }
+  }
+
+  &::after {
+    content: url(../img/background/leaf.png);
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+  
+}
+
+.delivery__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: url(../img/background/blueberry.png);
+    position: absolute;
+    left: -8%;
+    bottom: 10%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.delivery__heading {
+  color: $green;
+  margin: rem(86px) 0 rem(55px);
+  display: inline-block;
+  text-align: center;
+
+  @include tablets {
+    margin-top: rem(50px);
+    margin-bottom: rem(30px);
+  }
+}

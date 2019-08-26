@@ -1,0 +1,33 @@
+.socials {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+
+  @include phones {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+.socials__link {
+  width: rem(23px);
+  height: rem(20px);
+  margin-right: rem(20px);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__icon {
+  width: 100%;
+  height: 100%;
+  fill: rgba(0, 0, 0, 0.3);
+  transition: fill .3s;
+  &:hover {
+    fill: black;
+  }
+}
+
+

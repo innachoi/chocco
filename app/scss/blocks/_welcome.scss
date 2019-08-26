@@ -9,84 +9,192 @@
   &::before {
     content: url(../img/background/welcome_leaf.png);
     position: absolute;
-    bottom: -50px;
+    bottom: rem(-50px);
     left: 2%;
-    z-index: 10;
+    z-index: 5;
+
+  @include tablets {
+    bottom: 58%;
+    left: 20%;
+  }
+  
   }
   &:after {
     content: url(../img/background/welcome_berries.png);
     position: absolute;
     right: 2%;
-    bottom: -52px;
-    z-index: 10;
+    bottom: rem(-52px);
+    z-index: 5;
+
+    @include tablets {
+      content: "";
+      display: block;
+      width: rem(247px);
+      height: rem(265px);
+      background-image: url(../img/background/welcome_berries.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: 22%;
+      bottom: 46%;
+    }
+
+    @include phones {
+      width: rem(194px);
+      height: rem(208px);
+      bottom: 52%;
+    }
   }
+
+  @include tablets {
+    overflow: hidden;
+  }
+
 }
 
 .welcome__main {
   display: flex;
   height: 80vh;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 4% 10% 0;
+  }
+
+  @include phones {
+    padding: 4% 13% 0;
+  }
 }
 
 .welcome__content {
   display: flex;
   flex-flow: column;
-  margin-bottom: 47px;
+  margin-bottom: rem(47px);
   align-items: flex-start;
-  width: 50%;
+  width: 45%;
+  z-index: 10;
+
+  @include tablets {
+    margin-top: rem(-50px);
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .welcome__content-slogan {
-  font-size: 60px;
+  font-size: rem(60px);
   font-weight: $boldFont;
   line-height: 1;
   color: white;
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
+
+  @include tablets {
+    display: inline-block;
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: rem(40px);
+  }
+
+  @include phonesSmall {
+    font-size: rem(28px);
+  }
 }
 
 .welcome__content-desc {
   color: white;
   font-size: $sFont;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
   padding-right: 22%;
+
+  @include tablets {
+    display: inline-block;
+    text-align: center;
+    padding: 0 22%;
+  }
+
+  @include phones {
+    padding: 0 3%;
+  }
 }
 
 .welcome__content-btn {
-  margin-bottom: 68px;
+  margin-bottom: rem(68px);
+
+  @include tablets {
+    margin-bottom: rem(40px);
+  }
+
+  @include phonesSmall {
+    margin-bottom: rem(20px);
+  }
 }
 
 .welcome__bars {
   display: inline-block;
-  width: 50%;
+  width: 55%;
   position: relative;
-  top: -83px;
-  left: 2%;
+  top: rem(-83px);
+  left: 7%;
 
+  @include tablets {
+    order: -1;
+    width: 80%;
+    left: 0;
+  }
+
+  @include phones {
+    width: 70%;
+  }
+}
+
+.welcome__img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .welcome__features-list {
   display: flex;
-  justify-content: flex-end;
   padding: 0;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 rem(5px);
   .features__item {
     display: flex;
-    margin-right: 20px;
+    margin-right: rem(29px);
     .feature__icon {
-      width: 70px;
-      margin-right: 7px;
+      width: rem(65px);
+      height: rem(41px);
+      margin-right: rem(7px);
       .feature__img {
         max-width: 100%;
+        height: 100%;
         object-fit: cover;
-        filter: invert(100%);
+        @include svg(white, 0.5)
       }
     }
     .feature__text {
       display: inline-block;
       font-size: $xxsFont;
       color: white;
+
+      @include phonesSmall {
+        text-align: center;
+      }
     }
+
+    @include phonesSmall {
+      flex-direction: column;
+    }
+  }
+
+  @include tablets {
+    margin: 0;
+    padding-left: 3%;
+  }
+
+  @include phones {
+    padding: 0 3%;
   }
 }

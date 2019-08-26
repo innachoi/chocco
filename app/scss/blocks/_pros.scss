@@ -14,7 +14,10 @@
     position: absolute;
     left: 0;
     top: 63%;
-    z-index: 10;
+
+    @include phones {
+      display: none;
+    }
   }
 }
 
@@ -23,29 +26,60 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .pros__title {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-bottom: 53px;
+  margin-bottom: rem(53px);
   &-heading {
-    margin-bottom: 8px;
+    margin-bottom: rem(8px);
   }
   &-desc {
     display: block;
     margin: 0;
-    padding: 0 242px;
+    padding: 0 rem(242px);
     display: inline-block;
     text-align: center;
+
+    @include tablets {
+      padding: 0 20%;
+    }
+
+    @include tablets {
+      padding: 0 10%;
+    }
   }
+
+  @include tablets {
+    margin-bottom: rem(30px);
+  }
+
+  @include phonesSmall {
+    margin-top: rem(50px);
+
+  }
+
 }
 
 .pros__list {
+  position: relative;
   display: flex;
   padding: 0;
   margin: 0;
+  z-index: 10;
+
+  @include tablets {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  @include phones {
+    align-items: flex-start;
+    padding: 0 6%;
+  }
 }
 
 .pros__item {
@@ -54,40 +88,102 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin-right: 63px;
+  margin-right: rem(63px);
   &:last-child {
     margin: 0;
   }
   &:nth-child(2) {
     width: 31%;
+
+    @include tablets {
+      width: 55%;
+    }
+
+    @include phones {
+      width: 100%;
+    }
   }
   &-name {
-    font-size: 27px;
+    font-size: rem(27px);
     font-weight: $boldFont;
     color: black;
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
   }
   &-desc {
     display: inline-block;
     text-align: center;
     margin: 0;
+
+    @include phones {
+      text-align: initial;
+
+    }
+
+    @include phonesSmall {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  @include tablets {
+    width: 55%;
+    margin: 0 0 rem(30px);
+  }
+
+  @include phones {
+    flex-direction: initial;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @include phonesSmall {
+    flex-direction: column;
   }
 }
 
 .pros__icon {
   display: flex;
-  width: 125px;
-  height: 125px;
+  width: rem(125px);
+  height: rem(125px);
   border-radius: 50%;
   background: $lighter;
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    width: rem(100px);
+    height: rem(100px);
+  }
+
+  @include phones {
+    width: rem(125px);
+    height: rem(125px);
+    margin: 0;
+    margin-right: rem(13px);
+  }
 }
 
 .pros__img {
-  max-width: 53%;
+  max-width: 55%;
+  height: 50%;
   object-fit: cover;
 }
 
+.pros__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include phones {
+    align-items: initial;
+    width: 68%;
+  }
+
+  @include phonesSmall {
+    align-items: center;
+    width: 100%;
+  }
+}

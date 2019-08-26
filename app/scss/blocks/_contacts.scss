@@ -1,11 +1,20 @@
 .contacts {
   display: inline-block;
   text-align: center;
-  &::before {
-    content: url(../img/icons/phone.png);
+
+  .contacts__icon {
+    fill: white;
+    width: rem(12px);
+    height: rem(11px);
   }
   .contacts__tel {
-    font-size: 24px;
+    font-size: rem(24px);
     color: white;
+  }
+}
+
+.contacts--header {
+  @include tablets {
+    display: none;
   }
 }
