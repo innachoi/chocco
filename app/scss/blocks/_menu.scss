@@ -1,0 +1,16 @@
+.menu__list {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0;
+  margin: 21px 0;
+}
+
+.menu__item {
+  margin-right: 27px;
+  padding: 0;
+}
+
+.menu__link {
+  color: white;
+}

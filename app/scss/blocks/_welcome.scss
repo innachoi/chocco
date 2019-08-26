@@ -1,0 +1,92 @@
+.welcome {
+  position: relative;
+  @include sectionDesktop($blue);
+  display: flex;
+  flex-flow: column;
+  background-image: url(../img/background/pattern.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  &::before {
+    content: url(../img/background/welcome_leaf.png);
+    position: absolute;
+    bottom: -50px;
+    left: 2%;
+    z-index: 10;
+  }
+  &:after {
+    content: url(../img/background/welcome_berries.png);
+    position: absolute;
+    right: 2%;
+    bottom: -52px;
+    z-index: 10;
+  }
+}
+
+.welcome__main {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+}
+
+.welcome__content {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 47px;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.welcome__content-slogan {
+  font-size: 60px;
+  font-weight: $boldFont;
+  line-height: 1;
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.welcome__content-desc {
+  color: white;
+  font-size: $sFont;
+  margin: 0;
+  margin-bottom: 32px;
+  padding-right: 22%;
+}
+
+.welcome__content-btn {
+  margin-bottom: 68px;
+}
+
+.welcome__bars {
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  top: -83px;
+  left: 2%;
+
+}
+
+.welcome__features-list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 0 0 5px;
+  .features__item {
+    display: flex;
+    margin-right: 20px;
+    .feature__icon {
+      width: 70px;
+      margin-right: 7px;
+      .feature__img {
+        max-width: 100%;
+        object-fit: cover;
+        filter: invert(100%);
+      }
+    }
+    .feature__text {
+      display: inline-block;
+      font-size: $xxsFont;
+      color: white;
+    }
+  }
+}
