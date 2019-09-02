@@ -1,13 +1,19 @@
+.menu {
+  @include tablets {
+    display: none;
+  }
+}
+
 .menu__list {
   display: flex;
   flex: 1;
   justify-content: space-between;
   padding: 0;
-  margin: 21px 0;
+  margin: rem(21px) 0;
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: rem(27px);
   padding: 0;
 }
 

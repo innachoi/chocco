@@ -8,16 +8,25 @@
 // Order Button
 
 @mixin btnOrder ($color, $font) {
-  padding: 18px 35px;
+  padding: rem(18px) rem(35px);
   background-color: $color;
-  border-radius: 45px;
+  border-radius: rem(45px);
   border: none;
-  font-size: 19px;
+  font-size: rem(19px);
   font-weight: 800;
   color: $font;
   text-decoration: none;
   &:hover {
     cursor: pointer;
   }
+}
+
+// SVG Icons
+
+@mixin svg ($stroke, $stroke-width) {
+  fill: none;
+  stroke: $stroke;
+  stroke-width: $stroke-width;
+  stroke-miterlimit: 10;
 }
 

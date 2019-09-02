@@ -1,0 +1,26 @@
+.hamburger-menu__link {
+  position: relative;
+  display: none;
+  background: white;
+  width: rem(35px);
+  height: rem(5px);
+  border-radius: rem(2px);
+
+  &::before {
+    content: "";
+    @extend .hamburger-menu__link;
+    position: absolute;
+    margin-top: rem(13px);
+  }
+
+  &::after {
+    content: "";
+    @extend .hamburger-menu__link::before;
+    margin-top: rem(-13px);
+  }
+  
+  @include tablets {
+    display: block;
+  }
+
+}

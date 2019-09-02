@@ -1,3 +1,12 @@
-.btn-order--white {
+.btn__order--white {
   @include btnOrder (white, $green);
+}
+
+.btn__order--green {
+  @include btnOrder ($green, white);
+  margin-right: rem(25px);
+}
+
+.btn__reset {
+  color: $green;
 }

@@ -1,0 +1,166 @@
+.team {
+  @include sectionDesktop(white);
+  position: relative;
+  &::before {
+    content: url(../img/background/team__leaf.png);
+    position: absolute;
+    right: 0;
+    top: -30%;
+  }
+  &::after {
+    content: url(../img/background/blueberries.png);
+    position: absolute;
+    top: -14%;
+    right: 2%;
+
+    @include tablets {
+      content: "";
+      background-image: url(../img/background/blueberries.png);
+      background-size: cover;
+      display: block;
+      width: rem(102px);
+      height: rem(85px);
+      top: -5%;
+    }
+
+    @include phonesSmall {
+      display: none;
+    }
+  }
+}
+
+.team__container {
+  align-items: center;
+}
+
+.team__heading {
+  margin-bottom: rem(53px);
+  z-index: 5;
+
+  @include phonesSmall {
+    margin-top: rem(70px);
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-between;
+  z-index: 20;
+
+  @include tablets {
+    width: 60vw;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-bottom: rem(60px);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+.team__member {
+  width: 24%;
+  height: 60%;
+
+  &:nth-child(2n) {
+    margin-top: rem(50px);
+
+    @include tablets {
+      margin: 0;
+    }
+
+    @include phones {
+      margin-right: 0;
+    }
+
+    @include phonesSmall {
+      width: 66%;
+      margin: 0 17%;
+    }
+  }
+
+  @include tablets {
+    width: calc(50% - 20px);
+  }
+
+  @include phones {
+    width: 41%;
+    margin-right: rem(74px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phonesSmall {
+    width: 66%;
+    margin: 0 17%;
+  }
+}
+
+.member__photo {
+ width: 100%;
+ height: 60%;
+ margin-bottom: rem(26px);
+
+ @include phones {
+   width: 86%;
+ }
+}
+
+.member__img {
+  width: 100%;
+  height: rem(288px);
+  object-fit: cover;
+}
+
+.member__desc {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .member__name {
+    display: inline-block;
+    margin-bottom: rem(16px);
+    font-weight: $mediumFont;
+    font-size: $sFont;
+    color: black;
+  }
+}
+
+.member__acco::after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  border: rem(2px) solid transparent;
+  border-top-color: $green;
+  border-width: rem(9px) rem(7px) 0;
+  margin-left: rem(5px);
+}
+
+.member__skills {
+  display: inline-block;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  p {
+    font-weight: 300;
+  }
+}
+
+.member__position {
+  margin: 0 0 rem(6px);
+  color: #281e1e;
+}
+
+.member__acco--active + .member__skills {
+  min-height: rem(65px);
+}
+
+.member__acco--active::after {
+  transform: rotate(180deg);
+}

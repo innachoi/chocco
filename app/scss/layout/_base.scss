@@ -2,24 +2,37 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   font-family: $asFont;
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: normal;
   font-style: normal;
   color: $lightGray;
   margin: 0;
   padding: 0;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
   position: relative;
-  min-width: 942px + 20px;
+  width: 100%;
   min-height: 100%;
   overflow: hidden;
 }
@@ -46,14 +59,19 @@ button {
 .container {
   display: flex;
   flex-flow: column;
+  width: 94%;
   max-width: $desktop;
   min-height: 100vh;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: bold;
   color: $darkGray;
   margin: 0;
+
+  @include phones {
+    font-size: rem(40px);
+  }
 }
