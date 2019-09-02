@@ -15,6 +15,7 @@ html {
 }
 
 html, body {
+  width: 100%;
   height: 100%;
 }
 
@@ -28,6 +29,10 @@ body {
   padding: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+.body--overlay-menu {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -74,4 +79,9 @@ button {
   @include phones {
     font-size: rem(40px);
   }
+
+  @include phonesSmall {
+    font-size: rem(35px);
+  }
 }
+

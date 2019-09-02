@@ -10,6 +10,36 @@
 </head>
 <body>
   <div class="wrapper">
+    <div class="overlay" id="overlay">
+      <div class="overlay__hide-btn" id="close">
+        <span></span>
+      </div>
+      <nav class="overlay__menu">
+        <ul class="overlay__menu-list">
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">О НАС</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">БАТОНЧИКИ</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">КОМАНДА</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">МЕНЮ</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">ОТЗЫВЫ</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">КАК МЫ РАБОТАЕМ</a>
+          </li>
+          <li class="overlay__menu-item">
+            <a href="#" class="menu__link overlay__menu-link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section class="welcome section">
       <div class="container welcome__container">
         <header class="header">
@@ -49,8 +79,13 @@
           </div>
 
           <div class="hamburger-menu">
-            <a href="#" class="hamburger-menu__link"></a>
+            <a href="#" class="hamburger-menu__link" id="open">
+              <div></div>
+              <div></div>
+              <div></div>
+            </a>
           </div>
+          
         </header>
         <div class="welcome__main">
           <div class="welcome__content">
@@ -183,7 +218,139 @@
       </div>
     </section>
   
-    <!--Bar CHOCCO section -->
+    <section class="ingredients">
+      <div class="container ingredients__container">
+        <div class="ingredients__visual">
+          <img src="./img/content/ingredients_chocco.png" alt="" class="ingredients__img">
+        </div>
+        <div class="ingredients__content">
+          <div class="ingredients__tab">
+            <svg class="ingredients__icon" style="fill: white;">
+              <use xlink:href="./scss/layout/sprite.svg#ingredients"></use>
+            </svg>
+            <span>СОСТАВ</span>
+          </div>
+          <table class="ingredients__table">
+            <tbody class="ingredients__table-content">
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#oat"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Овёс
+                </td>
+                <td class="item__weight">
+                  25 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#seaweed"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Мор. водоросли
+                </td>
+                <td class="item__weight">
+                  15 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#almond"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Миндаль
+                </td>
+                <td class="item__weight">
+                  20 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#milk-powder"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Сухое молоко
+                </td>
+                <td class="item__weight">
+                  10 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#seeds"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Тыкв. семечки
+                </td>
+                <td class="item__weight">
+                  20 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#grape"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Зам. сахапа
+                </td>
+                <td class="item__weight">
+                  4 г
+                </td>
+              </tr>
+              <tr class="ingredients__item item">
+                <td class="item__icon">
+                  <svg class="item__img">
+                    <use xlink:href="./scss/layout/sprite.svg#beans"></use>
+                  </svg>
+                </td>
+                <td class="item__name">
+                  Какао бобы
+                </td>
+                <td class="item__weight">
+                  4 г
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="ingredients__desc">
+            <h3 class="ingredients__name"><span>БАТОНЧИК</span> “МОРСКИЕ ВОДОРОСЛИ”</h3>
+            <div class="ingredients__text">
+              <p>Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.</p>
+            </div>
+            <div class="ingredients__nutrients">
+              <div class="ingredients__ccal">
+                <div class="ingredients__parameter">Калорийность</div>
+                <div class="ingredients__parameter-number">120 ккал</div>
+              </div>
+              <div class="ingredients__weight">
+                <div class="ingredients__parameter">Вес</div>
+                <div class="ingredients__parameter-number">98 грамм</div>
+              </div>
+            </div>
+            <div class="ingredients__last-row">
+              <div class="ingredients__price">140 ₽</div>
+              <button type="button" class="btn__order btn__order--green">
+                ЗАКАЗАТЬ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     
     <section class="team">
       <div class="container team__container">
@@ -484,6 +651,7 @@
   </div>
 
 </body>
+<script src="./js/main.js"></script>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./js/app.min.js"></script>
 </html>

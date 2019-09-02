@@ -37,6 +37,10 @@
   align-items: baseline;
   &:last-child {
     margin-bottom: 0;
+    
+    @include phonesSmall {
+      margin-bottom: rem(5px);
+    }
   }
 
   @include tablets {
@@ -49,6 +53,10 @@
 
   @include tablets {
     margin: rem(30px) auto 0;
+  }
+
+  @include phonesSmall {
+    margin-top: rem(20px);
   }
 }
 
@@ -90,7 +98,7 @@
 
 
   &:focus {
-    outline: rem(3px) solid #dde3bd;
+    border: rem(3px) solid #dde3bd;
     
   }
 
@@ -99,12 +107,16 @@
   }
 
   @include tablets {
-    height: 50px;
+    height: rem(50px);
+  }
+
+  @include phones {
+    height: rem(48px);
   }
 }
 
 .form__radio, .form__checkbox {
-  display: none;
+  visibility: hidden;
 }
 
 .form__radio-fake {
