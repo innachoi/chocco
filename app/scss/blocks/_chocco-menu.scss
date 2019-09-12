@@ -1,0 +1,101 @@
+.chocco-menu {
+  position: relative;
+  @include sectionDesktop(#fff);
+  background-image: url(../img/content/menu_bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chocco-menu__heading {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  color: white;
+
+  @include tablets {
+    left: 5%;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+
+.chocco-menu__list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  width: 64vw;
+
+  @include phones {
+    width: 100vw;
+  }
+}
+
+.chocco-menu__item {
+  height: 100vh;
+  display: flex;
+  
+}
+
+.chocco-menu__link {
+  display: block;
+  width: rem(100px);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include phones {
+    width: rem(60px);
+  }
+}
+
+
+.chocco-menu__name {
+  @extend .section-title;
+  font-weight: $mediumFont;
+  color: white;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  position: relative;
+  top: 80%;
+
+  @include phones {
+    font-size: rem(34px);
+  }
+}
+
+.chocco-menu__desc {
+  background: rgba(0, 0, 0, 0.548);
+  overflow: hidden;
+  width: 0;
+}
+
+.chocco-menu__text {
+  color: white;
+  line-height: rem(24px);
+  font-size: $xxsFont;
+  padding: 30% 6% 0;
+
+  @include phones {
+    font-size: rem(20px);
+    line-height: rem(26px);
+  }
+}
+
+.menu-hidden--active + .chocco-menu__desc {
+  width: rem(556px);
+
+  @include tablets {
+    width: rem(320px);
+  }
+
+  @include phones {
+    width: rem(190px);
+  }
+}
+
