@@ -30,6 +30,8 @@
   padding: 0;
   margin: 0;
   width: 64vw;
+  height: 100%;
+  cursor: pointer;
 
   @include phones {
     width: 100vw;
@@ -71,12 +73,14 @@
 
 .chocco-menu__desc {
   background: rgba(0, 0, 0, 0.548);
+  color: transparent;
   overflow: hidden;
   width: 0;
+  transition: width .3s ease-in-out;
 }
 
 .chocco-menu__text {
-  color: white;
+ 
   line-height: rem(24px);
   font-size: $xxsFont;
   padding: 30% 6% 0;
@@ -84,18 +88,24 @@
   @include phones {
     font-size: rem(20px);
     line-height: rem(26px);
+    padding-top: 10%;
   }
 }
 
 .menu-hidden--active + .chocco-menu__desc {
   width: rem(556px);
+  color: white;
+  transition: width .3s, color .2s .3s ease-in-out;
 
   @include tablets {
     width: rem(320px);
   }
 
   @include phones {
+    width: rem(250px);
+  }
+
+  @include phonesSmall {
     width: rem(190px);
   }
 }
-

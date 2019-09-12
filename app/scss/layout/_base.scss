@@ -38,8 +38,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  height: 100%;
 }
 
 li {
@@ -66,7 +65,7 @@ button {
   flex-flow: column;
   width: 94%;
   max-width: $desktop;
-  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 

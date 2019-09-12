@@ -55,6 +55,23 @@
   }
 }
 
+.reviews__full-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.reviews__full-item {
+  display: none;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.reviews__full-item--active {
+  display: block;
+}
+
 .reviews__full {
   position: relative;
   display: flex;
@@ -99,14 +116,17 @@
     width: rem(460px);
     height: rem(600px);
     background-image: url(../img/background/review_bg-small.png);
+    margin: 0 auto;
   }
 
   @include phones {
-    height: rem(486px);
+    width: rem(380px);
+    height: rem(500px);
   }
 
   @include phonesSmall {
-    height: rem(420px);
+    width: 100%;
+    height: rem(450px);
   }
 }
 
@@ -212,35 +232,41 @@
 
   @include phones {
     margin-bottom: rem(75px);
+    margin-top: rem(8px);
   }
 }
 
 .reviews__item {
   margin-right: rem(10px);
-}
-
-.reviews__item-icon {
-  width: rem(67px);
-  height: rem(67px);
+  display: block;
+  width: rem(84px);
+  height: rem(84px);
   border-radius: 50%;
+  cursor: pointer;
   overflow: hidden;
-  border: rem(0px) solid;
-  transition: border .3s;
-  box-sizing: content-box;
   border: rem(6px) solid transparent;
+  transition: border .3s;
 
   @include tablets {
     width: rem(84px);
     height: rem(84px);
   }
-
+  
   @include phones {
     width: rem(68px);
     height: rem(68px);
   }
 }
 
-.reviews__item-icon--active {
+
+.reviews__item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.reviews__item--active {
   border: rem(6px) solid $green;
 }
 
