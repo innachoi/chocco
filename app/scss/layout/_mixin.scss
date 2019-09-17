@@ -11,7 +11,11 @@
 // Order Button
 
 @mixin btnOrder ($color, $font) {
-  padding: rem(18px) rem(35px);
+  display: flex;
+  width: rem(157px);
+  height: rem(58px);
+  align-items: center;
+  justify-content: center;
   background-color: $color;
   border-radius: rem(45px);
   border: none;

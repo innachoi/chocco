@@ -1,13 +1,16 @@
-.hamburger-menu__link {
-  position: relative;
+.hamburger-menu {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  z-index: 50;
   display: none;
 
   div{
     background: white;
-    width: rem(35px);
-    height: rem(5px);
+    width: rem(50px);
+    height: rem(8px);
     border-radius: rem(2px);
-    margin-bottom: rem(8px);
+    margin-bottom: rem(10px);
 
     &:last-child {
       margin-bottom: 0;
