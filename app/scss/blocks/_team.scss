@@ -66,7 +66,6 @@
 
 .team__member {
   width: 24%;
-  // height: 60%;
 
   &:nth-child(2n) {
 
@@ -77,7 +76,6 @@
 
   @include tablets {
     width: calc(50% - 20px);
-    // height: 45%;
   }
 
   @include phones {
@@ -162,11 +160,7 @@
   color: #281e1e;
 }
 
-.member__acco--active + .member__skills {
-  max-height: 100vh;
+.member__desc.member__desc--active + .member__acco::after {
+  transform: rotate(180deg);
+  transition: .3s;
 }
-
-// .member__acco--active::after {
-//   transform: rotate(180deg);
-//   transition: .3s;
-// }

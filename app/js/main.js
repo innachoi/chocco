@@ -121,18 +121,19 @@ let overlayMenu = (function (options) {
   let body = document.querySelector('body');
 
   let _toggleMenu = function(e) {
+    e.preventDefault();
     menu.classList.toggle('overlay--show');
     body.classList.toggle('body--overlay-menu');
   }
 
   let addListeners = function() {
-    buttonOpen.addEventListener('click', _toggleMenu );
+    buttonOpen.addEventListener('click', _toggleMenu);
     buttonClose.addEventListener('click', _toggleMenu);
 
     menu.addEventListener ('click', function(e) {
-      target = e.target;
+      let target = e.target;
       if (target.classList.contains('menu__link')) {
-        _toggleMenu();
+        _toggleMenu(e);
       }
     });
   }
@@ -152,29 +153,31 @@ overlayMenu.open();
 // Team Acco
 
 let teamAcco = () => {
-  let oMemberAcco = document.querySelectorAll('.member__acco');
+  let memberAcco = document.querySelectorAll('.member__acco');
 
-  oMemberAcco.forEach(function(personName) {
-    personName.addEventListener('click', function(e) {
+  memberAcco.forEach(function(memberName) {
+    memberName.addEventListener('click', function(e) {
       e.preventDefault();
+  
+      let memberActive = document.querySelector('.member__desc.member__desc--active');
 
-      let memberActive = document.querySelector('.member__desc--active');
+      
+      if(memberActive) {
+        let memberDetails = memberActive.querySelector('.member__skills');
+        memberDetails.style.height = '0px';
+        memberActive.classList.remove('member__desc--active');
+      };
+
       if(!memberActive) {
         let memberCurrent = e.target.closest('.member__desc');
         memberCurrent.classList.add('member__desc--active');
         let memberCurrentDetails = memberCurrent.querySelector('.member__skills');
         memberCurrentDetails.style.height = memberCurrentDetails.scrollHeight + 'px';
-
+        
       }
-
-      if(memberActive) {
-        let memberDetails = memberActive.querySelector('.member__skills');
-        memberDetails.style.height = '0px';
-        memberActive.classList.remove('member__desc--active');
-      }
-
     })
   })
+
 };
 teamAcco();
 
@@ -187,7 +190,6 @@ let menuAcco = () => {
     e.preventDefault();
 
     let target = e.target;
-    console.log(target);
 
     const link = target.closest('.chocco-menu__link');
     const links = document.querySelectorAll('.chocco-menu__link');

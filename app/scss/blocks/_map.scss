@@ -4,10 +4,6 @@
 
   @include tablets {
     min-height: initial;
-    max-height: 90vh;
-  }
-
-  @include phonesSmall {
     max-height: 100vh;
   }
 
