@@ -48,8 +48,12 @@
       padding: 0 20%;
     }
 
-    @include tablets {
+    @include phones {
       padding: 0 10%;
+    }
+
+    @include phonesSmall {
+      padding: 0 2%;
     }
   }
 
@@ -58,7 +62,7 @@
   }
 
   @include phonesSmall {
-    margin-top: rem(50px);
+    margin-bottom: rem(10px);
 
   }
 
@@ -79,6 +83,10 @@
   @include phones {
     align-items: flex-start;
     padding: 0 6%;
+  }
+
+  @include phonesSmall {
+    padding: 0;
   }
 }
 
@@ -109,6 +117,11 @@
     color: black;
     margin: 0;
     margin-bottom: rem(18px);
+
+    @include phonesSmall {
+      font-size: rem(23px);
+      margin-bottom: rem(4px);
+    }
   }
   &-desc {
     display: inline-block;
@@ -140,6 +153,7 @@
 
   @include phonesSmall {
     flex-direction: column;
+    margin-bottom: rem(10px);
   }
 }
 
@@ -163,6 +177,11 @@
     height: rem(125px);
     margin: 0;
     margin-right: rem(13px);
+  }
+
+  @include phonesSmall {
+    width: rem(55px);
+    height: rem(55px);
   }
 }
 

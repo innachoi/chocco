@@ -65,6 +65,14 @@
 }
 
 @font-face {
+  font-family: 'Alegreya';
+  src: url('../fonts/alegreyasans-blackitalic-webfont.woff2') format('woff2'),
+       url('../fonts/alegreyasans-blackitalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'Museo';
   src: url('../fonts/museo_sans_cyrl_500-webfont.woff2') format('woff2'),
         url('../fonts/museo_sans_cyrl_500-webfont.woff') format('woff');

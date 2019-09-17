@@ -15,6 +15,7 @@ html {
 }
 
 html, body {
+  width: 100%;
   height: 100%;
 }
 
@@ -30,11 +31,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.body--overlay-menu {
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  height: 100%;
 }
 
 li {
@@ -61,7 +65,7 @@ button {
   flex-flow: column;
   width: 94%;
   max-width: $desktop;
-  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -74,4 +78,9 @@ button {
   @include phones {
     font-size: rem(40px);
   }
+
+  @include phonesSmall {
+    font-size: rem(35px);
+  }
 }
+

@@ -1,8 +1,8 @@
-.btn__order--white {
+.btn--white {
   @include btnOrder (white, $green);
 }
 
-.btn__order--green {
+.btn--green {
   @include btnOrder ($green, white);
   margin-right: rem(25px);
 }

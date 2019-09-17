@@ -65,4 +65,9 @@
     margin-top: rem(50px);
     margin-bottom: rem(30px);
   }
+
+  @include phonesSmall {
+    margin-top: rem(30px);
+    margin-bottom: rem(18px);
+  }
 }
