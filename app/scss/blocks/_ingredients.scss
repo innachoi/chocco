@@ -20,6 +20,10 @@
   @include tablets {
     width: 15%;
   }
+
+  @include phones {
+    width: 7%;
+  }
 }
 
 .arrow--left {
@@ -39,7 +43,7 @@
   border: rem(2px) solid #0d0d0d;
   border-width: 0 0 rem(2px) rem(2px);
   cursor: pointer;
-  z-index: 25;
+  z-index: 5;
 
   @include tablets {
     top: 30%;
@@ -67,28 +71,34 @@
 
 .ingredients__slider-wrap {
   width: 100%;
+  height: 100%;
   overflow: hidden;
+
+  @include tablets {
+    height: 86%;
+  }
 }
 
 .ingredients__slider {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   right: 0;
-  z-index: 5;
   transition: right .3s;
 }
 
 .ingredients__slider-item{
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   flex-shrink: 0;
 
   @include tablets {
     flex-direction: column;
-    align-items: center;
   }
 
   @include phones {
@@ -96,6 +106,10 @@
 
   @include phonesSmall {
   }
+}
+
+.ingredients__slider-item--seaweed, .ingredients__slider-item--grape {
+  position: relative;
 }
 
 .ingredients__visual {
@@ -157,6 +171,8 @@
   background: $blue;
   border-radius: rem(5px);
   margin-bottom: rem(37px);
+  cursor: pointer;
+  z-index: 5;
 
   span {
     font-style: italic;
@@ -207,29 +223,74 @@
     margin: 0 23px rem(22px);
   }
 
+  @include phonesSmall {
+    font-size: rem(27px);
+  }
+
 }
 
-.ingredients__table {
+.ingredients__table-container {
   position: absolute;
-  top: 0;
-  left: 100%;
+  top: 13%;
+  right: 6%;
   width: rem(270px);
   height: rem(382px);
   background: rgba(255, 255, 255, 0.98);
-  padding: 2% 2% 0;
+  padding: 5% 2% 0;
   opacity: 0;
+  // z-index: 30;
   transition: opacity .3s;
-
+  
   @include tablets {
     top: 0;
-    left: -100%;
+    right: 19%;
+  }
+
+  @include phones {
+    padding-top: 11%;
   }
 }
 
-.ingredients__tab--seaweed:hover + .ingredients__table--seaweed {
+.ingredients__table-container--grape {
+  height: rem(300px);
+}
+
+.ingredients__table-closeBtn {
+  font-size: rem(26px);
+  font-weight: 800;
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.ingredients__table {
+  display: flex;
+  justify-content: stretch;
+}
+
+.ingredients__table-content {
+  flex: 1;
+}
+
+.ingredients__tab.ingredients__tab--seaweed:hover, .ingredients__tab.ingredients__tab--grape:hover {
+  background: #00accf;
+}
+
+.ingredients__tab.ingredients__tab--seaweed:hover + .ingredients__table-container.ingredients__table-container--seaweed {
   opacity: 1;
+  z-index: 30;
   transition: opacity .3s;
 }
+
+.ingredients__tab.ingredients__tab--grape:hover + .ingredients__table-container.ingredients__table-container--grape {
+  opacity: 1;
+  z-index: 30;
+  transition: opacity .3s;
+}
+
+
 
 .item {
   display: flex;
@@ -240,6 +301,7 @@
 
 .item__icon {
   width: 17%;
+  margin-right: 13%;
 
   .item__img {
     width: rem(33px);
@@ -252,10 +314,12 @@
   font-size: rem(16px);
   font-weight: $mediumFont;
   color: #2f3234;
+  margin-right: 5%;
 }
 
 
 .ingredients__desc {
+  z-index: 1;
   @include tablets {
     display: flex;
     flex-direction: column;

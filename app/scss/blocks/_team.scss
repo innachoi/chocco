@@ -51,6 +51,7 @@
   margin: 0 auto;
   justify-content: space-between;
   z-index: 20;
+  max-height: 100%;
 
   @include tablets {
     width: 60vw;
@@ -65,7 +66,6 @@
 
 .team__member {
   width: 24%;
-  height: 60%;
 
   &:nth-child(2n) {
 
@@ -82,7 +82,6 @@
     width: 44%;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -116,25 +115,22 @@
 
 .member__desc {
   width: 100%;
-  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
-  .member__name {
-    display: inline-block;
-    margin-bottom: rem(16px);
-    font-weight: $mediumFont;
-    font-size: $sFont;
-    color: black;
-
-    @include phonesSmall {
-      font-size: rem(18px);
-    }
-  }
 }
 
 .member__acco {
   cursor: pointer;
+  display: inline-block;
+  margin-bottom: rem(16px);
+  font-weight: $mediumFont;
+  font-size: $sFont;
+  color: black;
+
+  @include phonesSmall {
+    font-size: rem(18px);
+  }
 }
 
 .member__acco::after {
@@ -149,11 +145,7 @@
 }
 
 .member__skills {
-  display: inline-block;
-  position: absolute;
   width: 100%;
-  height: 0;
-  top: 85%;
   text-align: center;
   height: 0;
   overflow: hidden;
@@ -168,13 +160,7 @@
   color: #281e1e;
 }
 
-.member__acco--active + .member__skills {
-  min-height: rem(85px);
-  height: 100%;
-  transition: height .3s;
-}
-
-.member__acco--active::after {
+.member__desc.member__desc--active + .member__acco::after {
   transform: rotate(180deg);
   transition: .3s;
 }

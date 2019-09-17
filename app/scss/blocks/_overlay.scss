@@ -22,8 +22,8 @@
   cursor: pointer;
   width: rem(35px);
   height: rem(35px);
-  top: rem(40px);
-  right: 0;
+  top: 10%;
+  right: 8%;
 
   span {
     width: 100%;
@@ -33,8 +33,8 @@
       content: "";
       position: absolute;
       display: block;
-      width: rem(35px);
-      height: rem(5px);
+      width: rem(50px);
+      height: rem(9px);
       background: white;
       border-radius: rem(2px);
       transform: rotate(135deg);
@@ -43,8 +43,8 @@
     &::after {
       content: "";
       display: block;
-      width: rem(35px);
-      height: rem(5px);
+      width: rem(50px);
+      height: rem(9px);
       background: white;
       border-radius: rem(2px);
       transform: rotate(45deg);
@@ -53,6 +53,7 @@
 }
 
 .overlay__menu-list {
+  font-size: rem(34px);
   padding: 0;
   margin: 0;
   display: flex;
@@ -72,7 +73,7 @@
     height: rem(5px);
     background: white;
     border-radius: 50%;
-    margin: 10px 0;
+    margin: rem(16px) 0;
   }
 
   &:last-child::after {
